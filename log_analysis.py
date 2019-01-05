@@ -99,3 +99,13 @@ def day_s_more_than_1percent_of_requests_lead_to_errors():
         print '\t', res[0], ' -- ', res[1], '% errors'
     print "\n"
     db.close()
+
+
+print "\n"
+most_popular_three_articles()
+
+print "\n"
+most_popular_article_authors()
+
+print "\n"
+day_s_more_than_1percent_of_requests_lead_to_errors()
