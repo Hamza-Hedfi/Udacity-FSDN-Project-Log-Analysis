@@ -18,3 +18,5 @@ $ python log_analysis.py
 #### Prerequisites
 - [Python](https://www.python.org/)
 - [Psycopg](initd.org/psycopg/docs/install.html#prerequisites)
+# License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
