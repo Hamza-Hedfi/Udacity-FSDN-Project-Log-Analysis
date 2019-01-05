@@ -1,5 +1,5 @@
 # Udacity FSND Log Analysis Project
-Udacity Full Stack NanoDegree Log Analysis project.
+Udacity Full Stack Nanodegree Log Analysis project.
 # Description
 This is my solution for the log analysis project, from the Udacity FSND.
 ## Program description
