@@ -24,13 +24,13 @@ def most_popular_three_articles():
 
     # Create connection object
     # Create cursor
-    db, c = connect(DBNAME)
+    db, cursor = connect(DBNAME)
 
     # Execute the query
-    c.execute(query)
+    cursor.execute(query)
 
     # Get the query result
-    popular_articles = c.fetchall()
+    popular_articles = cursor.fetchall()
 
     # Print the result
     print "The most popular three articles of all time are :\n"
@@ -52,13 +52,13 @@ def most_popular_article_authors():
 
     # Create connection object
     # Create cursor
-    db, c = connect(DBNAME)
+    db, cursor = connect(DBNAME)
 
     # Execute the query
-    c.execute(query)
+    cursor.execute(query)
 
     # Get the query result
-    popular_authors = c.fetchall()
+    popular_authors = cursor.fetchall()
 
     # Print the result
     print "The most popular article authors of all time are :\n"
@@ -89,13 +89,13 @@ def day_s_more_than_1percent_of_requests_lead_to_errors():
 
     # Create connection object
     # Create cursor
-    db, c = connect(DBNAME)
+    db, cursor = connect(DBNAME)
 
     # Execute the query
-    c.execute(query)
+    cursor.execute(query)
 
     # Get the query result
-    results = c.fetchall()
+    results = cursor.fetchall()
 
     # Print the result
     print "day(s) did more than 1% of requests lead to errors :\n"
