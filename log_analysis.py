@@ -10,7 +10,7 @@ def connect(database_name):
         cursor = db.cursor()
         return db, cursor
     except psycopg2.DatabaseError, e:
-        print("<error message>")
+        print "Error!!"
 
 
 def most_popular_three_articles():
