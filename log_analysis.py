@@ -4,6 +4,15 @@ import psycopg2
 DBNAME = "news"
 
 
+def connect(database_name):
+    try:
+        db = psycopg2.connect("dbname={}".format(database_name))
+        cursor = db.cursor()
+        return db, cursor
+    except psycopg2.DatabaseError, e:
+        print("<error message>")
+
+
 def most_popular_three_articles():
     """returns the most popular three articles of all time"""
 
@@ -14,10 +23,8 @@ def most_popular_three_articles():
     order by article_views desc limit 3"""
 
     # Create connection object
-    db = psycopg2.connect(database=DBNAME)
-
     # Create cursor
-    c = db.cursor()
+    db, c = connect(DBNAME)
 
     # Execute the query
     c.execute(query)
@@ -44,10 +51,8 @@ def most_popular_article_authors():
     group by authors.id order by count desc"""
 
     # Create connection object
-    db = psycopg2.connect(database=DBNAME)
-
     # Create cursor
-    c = db.cursor()
+    db, c = connect(DBNAME)
 
     # Execute the query
     c.execute(query)
@@ -83,10 +88,8 @@ def day_s_more_than_1percent_of_requests_lead_to_errors():
     as q where percentage > 1.0"""
 
     # Create connection object
-    db = psycopg2.connect(database=DBNAME)
-
     # Create cursor
-    c = db.cursor()
+    db, c = connect(DBNAME)
 
     # Execute the query
     c.execute(query)
